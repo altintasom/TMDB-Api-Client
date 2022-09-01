@@ -1,4 +1,4 @@
-package com.altintas.myapplication.data.model
+package com.altintas.myapplication.data.model.tvshow
 
 data class TvShow(
     val backdrop_path: String,

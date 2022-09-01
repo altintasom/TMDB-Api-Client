@@ -1,4 +1,4 @@
-package com.altintas.myapplication.data.model
+package com.altintas.myapplication.data.model.movies
 
 
 import com.google.gson.annotations.SerializedName
