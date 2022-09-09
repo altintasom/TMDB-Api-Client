@@ -1,6 +1,7 @@
-package com.altintas.myapplication.data.model
+package com.altintas.myapplication.data.model.dto.artist
 
 
+import com.altintas.myapplication.data.model.entity.artist.KnownForEntity
 import com.google.gson.annotations.SerializedName
 
 data class KnownFor(
@@ -40,4 +41,13 @@ data class KnownFor(
     val voteAverage: Double?,
     @SerializedName("vote_count")
     val voteCount: Int?
+)
+
+fun KnownFor.toEntity(): KnownForEntity = KnownForEntity(
+    adult = this.adult, backdropPath = this.backdropPath, firstAirDate = this.firstAirDate,
+    genreIds = this.genreIds, id = this.id, mediaType = this.mediaType, name = this.name, originCountry = this.originCountry,
+    originalLanguage = this.originalLanguage, originalName = this.originalName, originalTitle = this.originalTitle,
+    overview = this.overview, posterPath = this.posterPath,releaseDate = this.releaseDate, title = this.title,
+    video = this.video, voteAverage = this.voteAverage, voteCount = this.voteCount
+
 )

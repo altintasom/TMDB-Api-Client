@@ -1,4 +1,4 @@
-package com.altintas.myapplication.data.model
+package com.altintas.myapplication.data.model.dto.tvshow
 
 data class TvShowList(
     val page: Int,

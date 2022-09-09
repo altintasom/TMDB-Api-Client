@@ -1,8 +1,9 @@
 package com.altintas.myapplication.data.api
 
-import com.altintas.myapplication.data.model.ArtistList
-import com.altintas.myapplication.data.model.MovieList
-import com.altintas.myapplication.data.model.TvShowList
+
+import com.altintas.myapplication.data.model.dto.artist.ArtistList
+import com.altintas.myapplication.data.model.dto.movies.MovieList
+import com.altintas.myapplication.data.model.dto.tvshow.TvShowList
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

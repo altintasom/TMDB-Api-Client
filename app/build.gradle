@@ -1,7 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'dagger.hilt.android.plugin'
     id 'kotlin-kapt'
+
 }
 
 android {
@@ -37,6 +39,7 @@ android {
         dataBinding = true
     }
 }
+
 def lifecycle_version = "2.6.0-alpha01"
 def arch_version = "2.1.0"
 def room_version = "2.4.3"
@@ -58,6 +61,8 @@ dependencies {
 
     // Saved state module for ViewModel
     implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version")
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
 
     // Annotation processor
     kapt("androidx.lifecycle:lifecycle-compiler:$lifecycle_version")
@@ -84,7 +89,7 @@ dependencies {
     //retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
-    implementation "com.square.okhttp3.logging-intercepter:$intercepter_version"
+    //implementation "com.square.okhttp3.logging-intercepter:$intercepter_version"
 
     //glide
     implementation "com.github.bumptech.glide:glide:$glide_version"
